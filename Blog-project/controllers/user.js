@@ -2,8 +2,8 @@ const { validationResult } = require("express-validator");
 const stripe = require("stripe")(
   "sk_test_51OXRstDezEDweoOhANJQVNgUXtPdCcTPg7g6FHfL43Y2UtV2xeyoY9BormevFNxmcISRt6ecS0znBajrQ5WzqcnA005pWKQikn"
 );
-const Post = require("../../models/post");
-const User = require("../../models/user");
+const Post = require("../models/post");
+const User = require("../models/user");
 
 const POST_PAR_PAGE = 6;
 
