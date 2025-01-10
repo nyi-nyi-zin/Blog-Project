@@ -194,7 +194,7 @@ exports.resetLinkSend = (req, res) => {
             from: process.env.SENDER_MAIL,
             to: email,
             subject: "Reset Password",
-            html: `<h1>Reset password.</h1><p>Change your account password by clicking the link below.</p><a href="${process.env.LOCAL_HOST}/reset-password/${token}" target="_blank">Click me to change password !!</a>`,
+            html: `<h1>Reset password.</h1><p>Change your account password by clicking the link below.</p><a href="https://blog-project-m1z3.onrender.com/reset-password/${token}" target="_blank">Click me to change password !!</a>`,
           },
           (err) => {
             console.log(err);
