@@ -17,7 +17,11 @@
     ></a>
     <% }%>
   </div>
-  <img src="<%= '/' + post.imgUrl %>" alt="<%= post.title %>" />
+  <img
+    src="<%= '/' + post.imgUrl %>"
+    alt="<%= post.title %>"
+    class="img-detail"
+  />
   <% if(post.userId._id.toString() === currentLoginUserId.toString()) { %>
   <div class="action-div">
     <form action="/admin/delete/<%= post._id %>" method="post">
