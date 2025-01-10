@@ -1,9 +1,9 @@
+dotenv = require("dotenv").config();
 const bcrypt = require("bcrypt");
 const User = require("../models/user");
 const crypto = require("crypto");
 
 const nodemailer = require("nodemailer");
-const dotenv = require("dotenv").config();
 
 const { validationResult } = require("express-validator");
 
@@ -194,7 +194,7 @@ exports.resetLinkSend = (req, res) => {
             from: process.env.SENDER_MAIL,
             to: email,
             subject: "Reset Password",
-            html: `<h1>Reset password.</h1><p>Change your account password by clicking the link below.</p><a href="http://localhost:8080/reset-password/${token}" target="_blank">Click me to change password !!</a>`,
+            html: `<h1>Reset password.</h1><p>Change your account password by clicking the link below.</p><a href="${process.env.LOCAL_HOST}/reset-password/${token}" target="_blank">Click me to change password !!</a>`,
           },
           (err) => {
             console.log(err);
